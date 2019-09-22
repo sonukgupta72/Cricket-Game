@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".play.PlayFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_play"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tv_non_str_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view_pitch"
+            android:text="P1"
+            android:layout_gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Subhead"/>
+        <View
+            android:id="@+id/view_pitch"
+            android:layout_width="90dp"
+            android:layout_height="360dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tv_str_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_pitch"
+            android:text="P2"
+            android:layout_gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Subhead"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_score_board"
+            android:layout_margin="8dp"
+            android:text="Play" />
+        
+        <LinearLayout
+            android:id="@+id/ll_score_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_current_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0/0"
+                style="@style/TextAppearance.AppCompat.Subhead"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_latest_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/tv_ball_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="0.0/5.0"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_target_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Target: "
+                style="@style/TextAppearance.AppCompat.Subhead"/>
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
